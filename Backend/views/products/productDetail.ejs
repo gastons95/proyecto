@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+    <body>
+
+        <%- include('./partials/header.ejs') %>
+
+
+            <section id="prodetails" class="section-p1">
+                <div class="single-pro-image">
+                    <img src="img/shopp/1.jpg" whidth="100%" id="MainImg" alt="">
+
+                    <div class="small-img-group">
+                        <div class="small-img-col">
+                            <img src="img/shopp/2.jpg" width="100%" class="small-img" alt="">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="img/shopp/3.jpg" width="100%" class="small-img" alt="">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="img/shopp/4.jpg" width="100%" class="small-img" alt="">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="img/shopp/5.jpg" width="100%" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-pro-details">
+                    <h6>remera casual</h6>
+                    <h4>Remera lila liviana</h4>
+                    <h2>$10.000</h2>
+                    <select>
+                        <option>Selecciona Talle</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                        <option>Small</option>
+                        <option>Large</option>
+                    </select>
+                    <input type="number" value="1">
+                    <button>Añadir al Carrito</button>
+                    <h4>Detalle Del Producto</h4>
+                    <span>La Remera GAS está confeccionada con un tejido resistente 100 % algodón.
+                        Esta Remera ofrece una comodidad inigualable con cada uso.
+                        Disponible en una amplia gama de colores, lo ofrece todo en un paquete que llama la
+                        atención.</span>
+                </div>
+            </section>
+
+            <%- include('./partials/producto.ejs') %>
+
+            <%- include('./partials/footer.ejs') %>
+
+
+
+                <script src="https://kit.fontawesome.com/efd6aa0e68.js" crossorigin="anonymous"></script>
+                <script src="script.js"></script>
+
+    </body>
+
+</html>

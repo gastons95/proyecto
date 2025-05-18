@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" href="editYcargar.css">
+</head>
+
+<body>
+    <section id="cargarProducto">
+        <h2>Cargar Nuevo Producto</h2>
+
+        <form id="create-form" enctype="multipart/form-data">
+            <label>Nombre</label>
+            <input type="text" name="nombre" required>
+
+            <label>Descripción</label>
+            <textarea name="descripcion" required></textarea>
+
+            <label>Precio</label>
+            <input type="number" name="precio" step="0.01" required>
+
+            <label>Talle</label>
+            <input type="text" name="text" required>
+
+            <label>Imagen</label>
+            <input type="file" name="imagen" accept="image/*" required>
+
+            <button type="submit">Guardar</button>
+        </form>
+
+        <div id="message"></div>
+    </section>
+    <section id="EditarProducto">
+        <h2>Editar Producto</h2>
+        <form id="edit-form" enctype="multipart/form-data">
+            <label>ID del Producto</label>
+            <input type="text" name="id" required>
+
+            <label>Nombre</label>
+            <input type="text" name="nombre" required>
+
+            <label>Descripción</label>
+            <textarea name="descripcion" required></textarea>
+
+            <label>Precio</label>
+            <input type="number" name="precio" step="0.01" required>
+
+            <label>Stock</label>
+            <input type="number" name="stock" required>
+
+            <label>Imagen (opcional)</label>
+            <input type="file" name="imagen" accept="image/*">
+
+            <button type="submit">Actualizar</button>
+        </form>
+    </section>
+    <script src="script.js"></script>>
+    
+</body>
+
+</html>

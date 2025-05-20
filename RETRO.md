@@ -1,5 +1,5 @@
 *1 Sprint
-este srpint me hizo darme cuenta que tengo mucho que aprender en progamacion, tanto en diseño como en el boceto, lo bueno esque pude superarme al entender mejor como se usa el css y el html juntamente para dar lugar a una pagina linda a la vista 
+este srpint me hizo darme cuenta que tengo mucho que aprender en progamacion, tanto en diseño como en el boceto, lo bueno esque pude superarme al entender mejor como se usa el html y el css juntamente para dar lugar a una pagina linda a la vista 
 y que sea responsiba.
 
 *2 Sprint

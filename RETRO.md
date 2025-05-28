@@ -13,3 +13,10 @@ Me gusto mucho saber que node.js se puede renderizar archivos html en el backend
 y estableciendo rutas y controladores, me demoro mucho tiempo hacer que mis vistas se puedan ver en el navegador, pero pude lograrlo, estuvo bueno el reutilizar el codigo repetitivo como footer, header,head
 me demoro mucho tiempo hacer que se vea la pagina de Detalle de producto, 
 fue un sprint muy enriqucedor en conocimiento sobre node.js solo me hubiese gustasdo que no me hubiese demorado mucho.
+
+*4 Sprint
+Aprendi mucho sobre como funcioan las rutas y la base de datos con los controladores
+es increible como la pagina va tomando forma y funcionalidad
+lo malo esque me demoro mucho en cada sprint
+pero voy seguro
+node.js  con ejs es increible lo funcional que es 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/css.css" />
+  <title>Crear nuevo producto</title>
+</head>
+<body>
+  <h1>Crear nuevo producto</h1>
+
+  <form action="/products" method="POST" enctype="multipart/form-data">
+  <label>Name:</label>
+  <input type="text" name="name" required />
+
+  <label>Description:</label>
+  <input type="text" name="description" required />
+
+  <label>Image:</label>
+  <input type="file" name="image" accept="image/*" required />
+
+  <label>Price:</label>
+  <input type="number" step="0.01" name="price" required />
+
+  <button type="submit">Create Product</button>
+</form>
+
+  <a href="/products">Volver al listado</a>
+</body>
+</html>

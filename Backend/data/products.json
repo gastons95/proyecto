@@ -1,0 +1,180 @@
+[
+  {
+    "id": 2,
+    "name": "Camisa casual verde manga corta",
+    "description": "Camisa verde de manga corta, ideal para el verano.",
+    "image": "/images/shopp/2.jpg",
+    "price": 12000,
+    "category": "camisas",
+    "colors": [
+      "verde"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Remera liviana blanca",
+    "description": "Remera básica blanca, cómoda y fresca.",
+    "image": "/images/shopp/3.jpg",
+    "price": 10000,
+    "category": "remeras",
+    "colors": [
+      "blanco"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Remera liviana roja",
+    "description": "Remera roja liviana para uso diario.",
+    "image": "/images/shopp/4.jpg",
+    "price": 10000,
+    "category": "remeras",
+    "colors": [
+      "rojo"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Remera verde mangas cortas",
+    "description": "Camisa con estampado de flores en tonos violetas.",
+    "image": "/images/shopp/5.jpg",
+    "price": 10000,
+    "category": "camisas",
+    "colors": [
+      "violeta",
+      "multicolor"
+    ],
+    "precio": null
+  },
+  {
+    "id": 6,
+    "name": "Camisa de flores manga corta",
+    "description": "Camisa de flores con manga corta, fresca y elegante.",
+    "image": "/images/shopp/6.jpg",
+    "price": 15000,
+    "category": "camisas",
+    "colors": [
+      "multicolor"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Campera frizada mujer",
+    "description": "Campera abrigada con interior frizado para mujer.",
+    "image": "/images/shopp/7.jpg",
+    "price": 25000,
+    "category": "camperas",
+    "colors": [
+      "negro",
+      "gris"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Tapado lila mujer",
+    "description": "Tapado elegante para mujer en color lila.",
+    "image": "/images/shopp/8.jpg",
+    "price": 35000,
+    "category": "tapados",
+    "colors": [
+      "lila"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Camisa multicolor + remera blanca",
+    "description": "Conjunto de camisa multicolor y remera blanca.",
+    "image": "/images/shop1/n1.jpg",
+    "price": 38000,
+    "category": "conjuntos",
+    "colors": [
+      "multicolor",
+      "blanco"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Camisa de jean celeste",
+    "description": "Camisa casual de jean color celeste.",
+    "image": "/images/shop1/n2.jpg",
+    "price": 15000,
+    "category": "camisas",
+    "colors": [
+      "celeste",
+      "azul"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Camisa marrón casual",
+    "description": "Camisa casual color marrón para uso diario.",
+    "image": "/images/shop1/n3.jpg",
+    "price": 20000,
+    "category": "camisas",
+    "colors": [
+      "marrón"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Camisa trabajo celeste sin cuello",
+    "description": "Camisa para trabajo, color celeste sin cuello.",
+    "image": "/images/shop1/n4.jpg",
+    "price": 15000,
+    "category": "camisas",
+    "colors": [
+      "celeste"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Camisa negra manga corta",
+    "description": "Camisa negra liviana de manga corta.",
+    "image": "/images/shop1/n5.jpg",
+    "price": 15000,
+    "category": "camisas",
+    "colors": [
+      "negro"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Camisa gris manga larga",
+    "description": "Camisa casual color gris de manga larga.",
+    "image": "/images/shop1/n6.jpg",
+    "price": 15000,
+    "category": "camisas",
+    "colors": [
+      "gris"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Camisa blanca sin cuello",
+    "description": "Camisa blanca de estilo moderno sin cuello.",
+    "image": "/images/shop1/n7.jpg",
+    "price": 23000,
+    "category": "camisas",
+    "colors": [
+      "blanco"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Camisa casual manga corta",
+    "description": "Camisa casual de manga corta para el verano.",
+    "image": "/images/shop1/n8.jpg",
+    "price": 15000,
+    "category": "camisas",
+    "colors": [
+      "azul",
+      "celeste"
+    ]
+  },
+  {
+    "id": 1748398763695,
+    "name": "remera lila",
+    "description": "Remera GAS comoda estilo casual de verano mangas cortas.",
+    "image": "/images/shopp/1.jpg",
+    "price": 10000
+  }
+]

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Listado de productos</title>
+  <link rel="stylesheet" href="/css/css.css">
+</head>
+<body>
+
+  <h1>Catálogo de productos</h1>
+
+  <div class="product-grid">
+    <% products.forEach(product => { %>
+      <div class="product-card">
+        <img src="<%= product.image %>" alt="<%= product.name %>" />
+        <h2><%= product.name %></h2>
+        <p><%= product.description %></p>
+        <p class="price">$<%= product.price %></p>
+        
+        <div class="btn-group">
+          <a href="/products/<%= product.id %>" class="btn btn-view">Ver</a>
+          <a href="/products/<%= product.id %>/edit" class="btn btn-edit">Editar</a>
+          <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit" class="btn btn-delete">Eliminar</button>
+          </form>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+</body>
+</html>

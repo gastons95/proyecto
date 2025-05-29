@@ -1,0 +1,285 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #21867a77;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #21867a;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+}
+
+.product-card p {
+  color: #666;
+}
+
+.product-card .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #28a745;
+  margin: 10px 0;
+}
+
+/* Botones generales */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Hover general para btn */
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Botones específicos */
+.btn-view {
+  background-color: #21867ada;
+}
+.btn-view:hover {
+  background-color: #21867aec;
+}
+
+.btn-edit {
+  background-color: #21867ada;
+}
+.btn-edit:hover {
+  background-color: #21867ae7;
+}
+
+.btn-delete {
+  background-color: #dc3546d5;
+}
+.btn-delete:hover {
+  background-color: #b02a37;
+}
+
+/* botones */
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Detalle del producto */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #21867a;
+}
+
+.container img {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.container p {
+  font-size: 16px;
+  color: black;
+  margin: 10px 0;
+}
+
+.container strong {
+  color: #21867a;
+}
+
+/* Formulario (crear y editar) */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  color: #21867a;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #21867a44;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.2s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #21867a;
+  box-shadow: 0 0 5px #21867a88;
+}
+
+/* Imagen actual miniatura */
+.image-preview {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Botones dentro de formularios */
+form .btn-edit {
+  background-color: #21867a;
+}
+form .btn-edit:hover {
+  background-color: #176158da;
+}
+
+form .btn-delete {
+  background-color: #dc3545;
+}
+form .btn-delete:hover {
+  background-color: #b02a37;
+}
+
+/* Contenedor de botones en formularios */
+form .btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Enlaces */
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #21867a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #176158;
+}
+ /* Perfil EJS **************************/
+ .profile-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-container h1 {
+  color: #21867a;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.profile-image {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.profile-info p {
+  font-size: 16px;
+  color: black;
+  margin: 12px 0;
+  font-weight: 600;
+}
+
+.profile-info strong {
+  color: #125e55;
+}
+
+/* Botón para editar perfil, igual estilo que editProfile */
+.btn-edit-profile {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0 auto;
+  padding: 12px 28px;
+  background-color: #088178;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit-profile:hover {
+  background-color:#088179ce;
+}

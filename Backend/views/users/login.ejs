@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head.ejs') %> 
+<%- include('../partials/head.ejs') %> 
 <body>
-    <%- include('./partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
+
     <section id="login">
-        <form action="">
-                <h2>Bienvenido</h2> <hr>
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Contraseña">
-                <button type="submit"> Iniciar sesion</button>    
-                <p>¿No tenes cuenta? <a href="register.html">Registrate</a></p>
-                <p>¿Perdiste tu contraseña? <a href="register.html">Recuperala</a></p>
-            </section>
+        <form action="/users/login" method="POST">
+            <h2>Bienvenido</h2>
+            <hr>
+
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+
+            <button type="submit">Iniciar sesión</button>
+
+            <p>¿No tenés cuenta? <a href="/users/register">Registrate</a></p>
+            <p>¿Perdiste tu contraseña? <a href="#">Recuperala</a></p>
         </form>
-    
-    <%- include('./partials/footer.ejs') %> 
+    </section>
+
+    <%- include('../partials/footer.ejs') %> 
 
     <script src="https://kit.fontawesome.com/efd6aa0e68.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

@@ -3,11 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const methodOverride = require('method-override');
+const session = require('express-session');  
 
 //Rutas
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const usersRouter = require('./routes/users');
 const RRoutes = require('./routes/RRoutes');
+const productRoutes = require('./routes/products');
 
 
 var app = express();
@@ -16,7 +18,7 @@ console.log(app)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.set("wiews","ruta")
+
 
 // configuraciones
 app.use(logger('dev'));
@@ -24,13 +26,38 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); // archivos estaticos
-app.use('/',RRoutes);
+app.use(methodOverride('_method')); 
+
+// configuracion de sesiones
+app.use(session({
+  secret: 'miSecretoSuperSecreto123', // cambia esto por algo seguro
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 // 1 día
+  }
+}));
+// Pasar informacion del usuario logeado
+app.use((req, res, next) => {
+  if (req.session && req.session.userLogged) {
+    res.locals.userLogged = req.session.userLogged;
+  } else {
+    res.locals.userLogged = false;
+  }
+  next();
+});
 
 
 
-// marcan el inicio de ruteo
-app.use('/', indexRouter);
+// Activa las rutas de usuario
 app.use('/users', usersRouter);
+
+
+
+// Rutas principales
+app.use('/', RRoutes);
+app.use('/products', productRoutes)
+
 
 
 

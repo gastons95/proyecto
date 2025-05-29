@@ -1,12 +1,12 @@
 module.exports = {
     producto: (req, res) => {
-        res.render('producto'); 
+        res.render('products/producto'); 
     },
     productDetail: (req, res) => {
         const productId = req.params.id;
-        res.render('productDetail', { productId });
+        res.render('products/productDetail', { productId });
     },
     productCart: (req, res) => {
-        res.render('productCar');
+        res.render('products/productCart');
     }
 };

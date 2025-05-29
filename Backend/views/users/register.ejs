@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<%- include('./partials/head.ejs') %>  
+<html lang="es">
+<%- include('../partials/head.ejs') %>  
 <body>
-    <%- include('./partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
 
     <section id="form-details">
-        <form action="">
-                <h2>Registrate</h2> <hr>
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Num Celular">
-                <input type="text" placeholder="Contraseña">
-                <button type="normal"> Registrate</button>    
-                <p>¿Tenes cuenta? - <a href="register.html">Inica Sesion</a></p>
-            </form>
-                   
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
+            <h2>Registrate</h2>
+            <hr>
+
+            <input type="text" name="firstName" placeholder="Nombre" required>
+            <input type="text" name="lastName" placeholder="Apellido" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="phone" placeholder="Num Celular">
+            <input type="password" name="password" placeholder="Contraseña" required>
+
+            <label for="image">Foto de perfil:</label>
+            <input type="file" name="image">
+
+            <select name="category">
+                <option value="user">Usuario</option>
+                <option value="admin">Administrador</option>
+            </select>
+
+            <button type="submit" class="btn btn-edit">Registrate</button>
+
+            <p>¿Tenés cuenta? - <a href="/users/login">Iniciá sesión</a></p>
+        </form>
     </section>
-    <%- include('./partials/footer.ejs') %> 
+
+    <%- include('../partials/footer.ejs') %> 
 
     <script src="https://kit.fontawesome.com/efd6aa0e68.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

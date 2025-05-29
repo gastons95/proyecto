@@ -1,0 +1,16 @@
+<head>
+  <link rel="stylesheet" href="/css/css.css">
+</head> 
+<div class="profile-container">
+  <h1>Perfil de Usuario</h1>
+
+  <img src="<%= user.image %>" alt="Foto de <%= user.firstName %>" class="profile-image" />
+
+  <div class="profile-info">
+    <p><strong>Nombre:</strong> <%= user.firstName %> <%= user.lastName %></p>
+    <p><strong>Email:</strong> <%= user.email %></p>
+    <p><strong>Categoría:</strong> <%= user.category %></p>
+  </div>
+
+  <a href="/users/edit" class="btn-edit-profile">Editar perfil</a>
+</div>

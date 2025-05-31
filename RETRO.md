@@ -17,6 +17,17 @@ fue un sprint muy enriqucedor en conocimiento sobre node.js solo me hubiese gust
 *4 Sprint
 Aprendi mucho sobre como funcioan las rutas y la base de datos con los controladores
 es increible como la pagina va tomando forma y funcionalidad
-lo malo esque me demoro mucho en cada sprint
-pero voy seguro
-node.js  con ejs es increible lo funcional que es 
+es increible como se puede crear archivos funcionales desde la parte del backend gracias a node.js y EJS
+fue muy entretenido crear una base de datos JSON 
+lo malo esque me demoro mucho en cada sprint, voy a mejorar en eso lo mas que pueda asi entrego el trabajo en tiempo
+
+*5 Sprint
+
+en este sprint aprendi mucho sobre los usuarios y  middlewares
+un login seguro y sencillo
+al igual un registro seguro y sencillo y que se conecte con la base de datos de parte del usuario
+editar el perfil tambien estuvo fenomenal
+a este sprint lo hice mas rapido que los demas ya que es bastante parecido al  sprint anterior 
+pero con el usuario y el registro
+
+*6 Sprint

@@ -39,3 +39,5 @@ la creacion de las tablas y la base de datos fue genial
 tambien se tenia que modificar el EJS para que pueda adaptarse a sequelize
 tuve muchos errores con los nombres de los productos y de la base de datos, lo pude resolver, de todas maneras este sprint fue mucho mas rapido que los demas
 guarde los archivos pdf en trello
+
+*Sprint 7

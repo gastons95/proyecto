@@ -36,4 +36,6 @@ pero con el usuario y el registro
 *6 Sprint
 en este sprint pude aprender mas sobre como funciona una base de datos, y sus tablas, que la base de datos tiene una contraseña en MySQL y SEQUELIZE con ORM
 la creacion de las tablas y la base de datos fue genial
-a este sprint lo hice mas rapido que los demas 
+tambien se tenia que modificar el EJS para que pueda adaptarse a sequelize
+tuve muchos errores con los nombres de los productos y de la base de datos, lo pude resolver, de todas maneras este sprint fue mucho mas rapido que los demas
+guarde los archivos pdf en trello

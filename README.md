@@ -10,7 +10,8 @@ https://www.castellanas.com.ar/?srsltid=AfmBOooX9smvemMrnJd_vUuG9bExlOxva_MCvTqO
 Eleji estas paginas son algo que quiero imitar , estan muy bien echas para vender rapido y facul.
 
 -BOCETO DEL SITIO:
-https://www.figma.com/design/sasjGHIx8COlUo7GR17FUY/Untitled?node-id=61-2&t=3K5vh2ZXhq48kAsu-1
+https://www.figma.com/design/sasjGHIx8COlUo7GR17FUY/Untitled?node-id=61-2&t=3K5vh2ZXhq48kAsu-1 
+(los bocetos no me di cuenta y estan super chicos en la parte de arriba en el centro, se ven bien con zoom)
 
 -TABLERO DE TRABAJO
 https://trello.com/b/GQlfX9G5/proyecto-final-de-dh

@@ -41,3 +41,13 @@ tuve muchos errores con los nombres de los productos y de la base de datos, lo p
 guarde los archivos pdf en trello
 
 *Sprint 7
+en este sprint se me hizo un poco mas rapido que los demas, pero si me costo la cuestion de validar desde el backend
+apesar de que algunos puntos se unian con otros y se hacia mas rapido fue muy confortante saber que funciona
+y saber que se puede validar por el frontend es increible aunq no sea muy efectivo 
+validar desde el backen es una muy buena experiencia
+todos los productos y el login, el registro de usuario 
+*Sprint 8
+me parecio increible React para el frontend
+y como la api del fron se conecta a la app del backend
+el dashboard con todos los datos de usuarios y productos es excelente 
+la verdad se que tengo mucho que mejorar, pero el haber podido haber echo todo este recorrido fue genial

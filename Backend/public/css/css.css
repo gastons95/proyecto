@@ -71,20 +71,19 @@ h1 {
 
 /* Hover general para btn */
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #21867ab2;
 }
 
 /* Botones específicos */
-.btn-view {
+.btn-view,
+.btn-edit {
   background-color: #21867ada;
 }
+
 .btn-view:hover {
   background-color: #21867aec;
 }
 
-.btn-edit {
-  background-color: #21867ada;
-}
 .btn-edit:hover {
   background-color: #21867ae7;
 }
@@ -92,6 +91,7 @@ h1 {
 .btn-delete {
   background-color: #dc3546d5;
 }
+
 .btn-delete:hover {
   background-color: #b02a37;
 }
@@ -107,32 +107,32 @@ h1 {
 
 /* Detalle del producto */
 .container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 30px;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .container h1 {
+  font-size: 32px;
   margin-bottom: 20px;
-  font-size: 28px;
   color: #21867a;
 }
 
 .container img {
-  margin-bottom: 20px;
-  border-radius: 10px;
   max-width: 100%;
   height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 .container p {
-  font-size: 16px;
+  font-size: 18px;
   color: black;
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .container strong {
@@ -183,22 +183,24 @@ form input:focus {
   max-width: 100%;
   max-height: 200px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Botones dentro de formularios */
 form .btn-edit {
   background-color: #21867a;
 }
+
 form .btn-edit:hover {
   background-color: #176158da;
 }
 
 form .btn-delete {
-  background-color: #dc3545;
+  background-color: #dc3545 !important;;
 }
+
 form .btn-delete:hover {
-  background-color: #b02a37;
+  background-color: #b02a37 !important;;
 }
 
 /* Contenedor de botones en formularios */
@@ -208,6 +210,26 @@ form .btn-group {
   gap: 15px;
   flex-wrap: wrap;
   margin-top: 20px;
+}
+
+/* Botón Crear producto o botón submit en formularios */
+form button[type="submit"] {
+  background-color: #21867a; 
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #21867ad8;
 }
 
 /* Enlaces */
@@ -224,8 +246,9 @@ a {
 a:hover {
   color: #176158;
 }
- /* Perfil EJS **************************/
- .profile-container {
+
+/* Perfil EJS **************************/
+.profile-container {
   max-width: 400px;
   margin: 40px auto;
   padding: 25px 30px;
@@ -265,7 +288,7 @@ a:hover {
   color: #125e55;
 }
 
-/* Botón para editar perfil, igual estilo que editProfile */
+/* Botón para editar perfil */
 .btn-edit-profile {
   display: block;
   width: fit-content;
@@ -281,5 +304,157 @@ a:hover {
 }
 
 .btn-edit-profile:hover {
-  background-color:#088179ce;
+  background-color: #088179ce;
+}
+
+/* Header */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #e3f0efa9;
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.6);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.header-productos {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-productos .btn-create {
+  background-color: #21867a;
+  margin-top: 10px;
+}
+
+/* Botón crear producto */
+.btn-create {
+  display: inline-block;
+  padding: 10px;
+  background-color: #21867a;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-create:hover {
+  background-color: #21867ae1;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#navbar li {
+  list-style: none;
+}
+
+#navbar li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+#navbar li a.active {
+  color: #088178;
+}
+
+#mobile {
+  display: none;
+}
+
+@media (max-width: 477px) {
+  #mobile {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3ee;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: right 0.3s ease;
+  }
+
+  #navbar.active {
+    right: 0;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 26px;
+    cursor: pointer;
+  }
 }

@@ -1,25 +1,28 @@
 <section id="header">
-    <a href="/"><img src="/images/logo2.png" class="logo" alt=""></a>
-    <div>
-        <ul id="navbar">
-            <li><a href="/">Home</a></li>
-            <li><a href="/productos">Tienda</a></li>
+  <a href="/"><img src="/images/logo2.png" class="logo" alt=""></a>
+  <div>
+    <ul id="navbar">
+      <li><a href="/">Home</a></li>
+      <li><a href="/productos">Tienda</a></li>
 
-            <% if(userLogged) { %>
-                <li><p>Hola, <%= userLogged.firstName %>!</p></li>
-                <li><a href="/users/profile">Mi perfil</a></li>
-                <li><a href="/users/logout">Cerrar sesión</a></li>
-            <% } else { %>
-                <li><a href="/users/register">Registro</a></li>
-                <li><a href="/users/login"><i class="ri-user-line"></i></a></li>
-            <% } %>
+      <% if (userLogged) { %>
+        <li><p>Hola, <%= userLogged.firstName %>!</p></li>
+        <li><a href="/users/profile">Mi perfil</a></li>
+        <li><a href="/users/logout">Cerrar sesión</a></li>
+      <% } else { %>
+        <li><a href="/users/register">Registro</a></li>
+        <li><a href="/users/login"><i class="ri-user-line"></i></a></li>
+      <% } %>
 
-            <li id="lg-bag"><a href="/carrito"><i class="ri-shopping-cart-2-fill"></i></a></li>
-            <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
-        </ul>
-    </div>
-    <div id="mobile">
-        <a href="/carrito"><i class="ri-shopping-cart-2-fill"></i></a>
-        <i id="bar" class="fas fa-outdent"></i>
-    </div>
+      <li id="lg-bag"><a href="/carrito"><i class="ri-shopping-cart-2-fill"></i></a></li>
+      
+      <!-- sólo visible en mobile -->
+      <li><a href="#" id="close"><i class="fa-solid fa-xmark"></i></a></li>
+    </ul>
+  </div>
+
+  <div id="mobile">
+    <a href="/carrito"><i class="ri-shopping-cart-2-fill"></i></a>
+    <i id="bar" class="fas fa-outdent"></i>
+  </div>
 </section>

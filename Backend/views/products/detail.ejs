@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= product.name %> - Detalle</title>
-  <link rel="stylesheet" href="/css/css.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    <%= product.nombre %> - Detalle
+  </title>
+  <link rel="stylesheet" href="/css/profile.css" />
 </head>
+
 <body>
   <div class="container">
-    <h1><%= product.name %></h1>
+    <h1>
+      <%= product.name %>
+    </h1>
 
-    <img src="<%= product.image %>" alt="<%= product.name %>" width="200">
+    <% if (product.image) { %>
+      <img src="<%= product.image %>" alt="<%= product.name %>" width="200" />
+      <% } else { %>
+        <img src="/images/default.png" alt="Sin imagen" width="200" />
+        <% } %>
 
-    <p><strong>Descripción:</strong> <%= product.description %></p>
-    <p><strong>Precio:</strong> $<%= product.price %></p>
+          <p><strong>Descripción:</strong>
+            <%= product.description %>
+          </p>
+          <p><strong>Precio:</strong> $<%= parseFloat(product.price).toFixed(2) %>
+          </p>
+          <div class="btn-group">
+            <a href="/products/<%= product.id %>/edit" class="btn btn-edit">Editar</a>
 
-    <div class="btn-group">
-      <a href="/products/<%= product.id %>/edit" class="btn btn-edit">Editar</a>
+            <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display:inline;">
+              <button type="submit" class="btn btn-delete">Eliminar</button>
+            </form>
 
-      <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display:inline;">
-        <button type="submit" class="btn btn-delete">Eliminar</button>
-      </form>
-
-      <a href="/products" class="btn btn-view">Volver al listado</a>
-    </div>
+            <a href="/products" class="btn btn-view">Volver al listado</a>
+          </div>
   </div>
 </body>
+
 </html>

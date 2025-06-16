@@ -1,0 +1,70 @@
+.dashboard-container {
+  background-color: #21867a77;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Título principal */
+.dashboard-container h2 {
+  font-size: 28px;
+  color: #21867a;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Subtítulos */
+.dashboard-container h3 {
+  font-size: 22px;
+  color: #125e55;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Lista de categorías y productos */
+.dashboard-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dashboard-container li {
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 12px 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-weight: 500;
+}
+
+/* Últimos creados */
+.dashboard-container p {
+  background-color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Cuando no hay datos */
+.dashboard-container p:not(:has(strong)) {
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .dashboard-container h2 {
+    font-size: 24px;
+  }
+
+  .dashboard-container h3 {
+    font-size: 20px;
+  }
+}

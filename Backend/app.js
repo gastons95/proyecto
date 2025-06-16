@@ -1,85 +1,74 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const methodOverride = require('method-override');
-const session = require('express-session');  
-
-//Rutas
+const session = require('express-session');
+const cors = require('cors');
 const usersRouter = require('./routes/users');
 const RRoutes = require('./routes/RRoutes');
 const productRoutes = require('./routes/products');
 
-
-var app = express();
-console.log(app)
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-
-// configuraciones
+// middlewares base
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public'))); // archivos estaticos
-app.use(methodOverride('_method')); 
+app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// configuracion de sesiones
+// Cors
+app.use(cors());
+
+// sesiones
 app.use(session({
-  secret: 'miSecretoSuperSecreto123', // cambia esto por algo seguro
+  secret: 'miSecretoSuperSecreto123',
   resave: false,
   saveUninitialized: false,
   cookie: {
-    maxAge: 1000 * 60 * 60 * 24 // 1 día
+    maxAge: 1000 * 60 * 60 * 24
   }
 }));
-// Pasar informacion del usuario logeado
+
+// variable global de usuario logueado
 app.use((req, res, next) => {
-  if (req.session && req.session.userLogged) {
-    res.locals.userLogged = req.session.userLogged;
-  } else {
-    res.locals.userLogged = false;
-  }
+  res.locals.userLogged = req.session.userLogged || false;
   next();
 });
 
-
-
-// Activa las rutas de usuario
-app.use('/users', usersRouter);
-
-
-
-// Rutas principales
+// rutas
 app.use('/', RRoutes);
-app.use('/products', productRoutes)
+app.use('/users', usersRouter);
+app.use('/products', productRoutes);
+
+// Api
+app.use('/api/users', require('./routes/api/Users'));
+app.use('/api/products', require('./routes/api/products'));
 
 
-
-
-app.listen(3000, () => {
-    console.log('Servidor corriendo en http://localhost:3000');
-});
-
-
-// catch 404 and forward to error handler ( configuraciones para el manejor de errores)
-app.use(function(req, res, next) {
+// 404 not found
+app.use((req, res, next) => {
+  console.log(`Ruta no encontrada: ${req.method} ${req.originalUrl}`);
   next(createError(404));
 });
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
+// manejador de errores
+app.use((err, req, res, next) => {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.listen(3001, () => {
+  console.log('Servidor corriendo en http://localhost:3001');
 });
 
 module.exports = app;

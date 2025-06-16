@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Listado de productos</title>
   <link rel="stylesheet" href="/css/css.css">
 </head>
-<body>
 
-  <h1>Catálogo de productos</h1>
+<body>
+  <h1>Lista de productos</h1>
 
   <div class="product-grid">
     <% products.forEach(product => { %>
       <div class="product-card">
-        <img src="<%= product.image %>" alt="<%= product.name %>" />
+        <% if (product.image) { %>
+          <img src="<%= product.image %>" alt="<%= product.name %>" />
+        <% } else { %>
+          <img src="/images/products/default.png" alt="Sin imagen" />
+        <% } %>
+
         <h2><%= product.name %></h2>
         <p><%= product.description %></p>
-        <p class="price">$<%= product.price %></p>
-        
+        <p class="price">$<%= Number(product.price).toFixed(2) %></p>
+
+        <% if (product.category && product.category.name) { %>
+          <p>Categoría: <%= product.category.name %></p>
+        <% } %>
+
         <div class="btn-group">
           <a href="/products/<%= product.id %>" class="btn btn-view">Ver</a>
           <a href="/products/<%= product.id %>/edit" class="btn btn-edit">Editar</a>
@@ -28,5 +38,10 @@
     <% }) %>
   </div>
 
+  <div style="margin-top: 20px; text-align: center;">
+    <a href="/products/create" class="btn btn-create">Crear producto</a>
+    <a href="/users/profile" class="btn btn-create">Mi Perfil</a>
+  </div>
 </body>
+
 </html>

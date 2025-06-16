@@ -1,39 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/css/css.css" />
   <title>Editar producto</title>
 </head>
+
 <body>
   <h1>Editar producto</h1>
 
-  <!-- FORMULARIO con enctype para subir archivos -->
   <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="_method" value="PUT" />
+    <label>Nombre:</label>
+    <input 
+      type="text" 
+      name="name" 
+      value="<%= oldData?.name || product.name %>" 
+      required
+    >
+    <% if (errors?.name) { %>
+      <p class="error"><%= errors.name.msg %></p>
+    <% } %>
 
-    <label>Name:</label>
-    <input type="text" name="name" value="<%= product.name %>" required />
+    <label>Descripción:</label>
+    <textarea name="description" required><%= oldData?.description || product.description %></textarea>
+    <% if (errors?.description) { %>
+      <p class="error"><%= errors.description.msg %></p>
+    <% } %>
 
-    <label>Description:</label>
-    <input type="text" name="description" value="<%= product.description %>" required />
+    <label>Precio:</label>
+    <input 
+      type="number" 
+      step="0.01" 
+      name="price" 
+      value="<%= oldData?.price || product.price %>" 
+      required
+    >
+    <% if (errors?.price) { %>
+      <p class="error"><%= errors.price.msg %></p>
+    <% } %>
+
+    <label>Categoría:</label>
+    <select name="categoryId" required>
+      <% categories.forEach(category => { %>
+        <option 
+          value="<%= category.id %>" 
+          <%= (oldData?.categoryId == category.id || product.categoryId == category.id) ? 'selected' : '' %>>
+          <%= category.name %>
+        </option>
+      <% }) %>
+    </select>
+    <% if (errors?.categoryId) { %>
+      <p class="error"><%= errors.categoryId.msg %></p>
+    <% } %>
+
+    <label>Marca:</label>
+    <select name="brandId" required>
+      <% brands.forEach(brand => { %>
+        <option 
+          value="<%= brand.id %>" 
+          <%= (oldData?.brandId == brand.id || product.brandId == brand.id) ? 'selected' : '' %>>
+          <%= brand.name %>
+        </option>
+      <% }) %>
+    </select>
+    <% if (errors?.brandId) { %>
+      <p class="error"><%= errors.brandId.msg %></p>
+    <% } %>
+
+    <label>Color:</label>
+    <select name="colorId" required>
+      <% colors.forEach(color => { %>
+        <option 
+          value="<%= color.id %>" 
+          <%= (oldData?.colorId == color.id || product.colorId == color.id) ? 'selected' : '' %>>
+          <%= color.name %>
+        </option>
+      <% }) %>
+    </select>
+    <% if (errors?.colorId) { %>
+      <p class="error"><%= errors.colorId.msg %></p>
+    <% } %>
+
+    <label>Talle:</label>
+    <select name="sizeId" required>
+      <% sizes.forEach(size => { %>
+        <option 
+          value="<%= size.id %>" 
+          <%= (oldData?.sizeId == size.id || product.sizeId == size.id) ? 'selected' : '' %>>
+          <%= size.name %>
+        </option>
+      <% }) %>
+    </select>
+    <% if (errors?.sizeId) { %>
+      <p class="error"><%= errors.sizeId.msg %></p>
+    <% } %>
 
     <label>Imagen actual:</label>
-    <p><%= product.image %></p>
+    <% if (product.image) { %>
+      <img src="/images/<%= product.image %>" alt="Imagen del producto" width="100">
+    <% } else { %>
+      <p>No hay imagen</p>
+    <% } %>
 
-    <label>Change image (optional):</label>
-    <input type="file" name="image" accept="image/*" />
+    <br>
+    <label>Subir nueva imagen:</label>
+    <input type="file" name="image" accept="image/*">
 
-    <!-- Campo oculto para conservar imagen si no se cambia -->
-    <input type="hidden" name="currentImage" value="<%= product.image %>" />
-
-    <label>Price:</label>
-    <input type="number" step="0.01" name="price" value="<%= product.price %>" required />
-
-    <button type="submit">Guardar cambios</button>
+    <button type="submit">Actualizar</button>
   </form>
 
   <a href="/products">Volver al listado</a>
+   <script src="/javascripts/CyMdeProductos.js"></script>
 </body>
+
 </html>

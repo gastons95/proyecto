@@ -1,57 +1,56 @@
 [
   {
-   "id": 1,
-    "firstName": "Gaston",
-    "lastName": "Suarez",
-    "email": "gastonsbu1@gmial.com",
-    "password": "155433310lionel.",
-    "category": "admin",
-    "image": "/images/users/gaston.jpg"  
-  },
-  {
-    "id": 2,
+    "id": 1,
     "firstName": "Carlos",
     "lastName": "Pérez",
     "email": "carlos.perez@gmail.com",
-    "password": "carlos5678",
+    "password": "$2b$10$eDFcz6muOtgd0EmJ2M9MTuQaX6BSV2FLEedRmY3Hw2JleHNBc7dtq",
     "category": "user",
     "image": "/images/users/carlos.jpg"
   },
   {
-    "id": 3,
+    "id": 2,
     "firstName": "María",
     "lastName": "Gómez",
     "email": "maria.gomez@gmail.com",
-    "password": "maria9012",
+    "password": "$2b$10$xTmmnL6JzG5zOeHpZ9Ac6ehzN.qhYOPch.gyNDXB0INt0GRVyk14C",
     "category": "user",
     "image": "/images/users/maria.jpg"
   },
   {
-    "id": 4,
+    "id": 3,
     "firstName": "Juan",
     "lastName": "Rodríguez",
     "email": "juan.rodriguez@gmail.com",
-    "password": "juan3456",
+    "password": "$2b$10$hxYY5DwHKkGp8Nih5Blm6ubgZTtycqzRWOnRA2VXEDfpntz6NTeWy",
     "category": "user",
     "image": "/images/users/juan.jpg"
   },
   {
-    "id": 5,
+    "id": 4,
     "firstName": "Sofía",
     "lastName": "Martínez",
-    "email": "sofia.martinez@gmial.com",
-    "password": "sofia7890",
+    "email": "sofia.martinez@gmail.com",
+    "password": "$2b$10$j4b8vBSmVmmpGG/UZ8rwSeZTYiUSYJZ.4kzBSIdpPDtViSx9.XMje",
     "category": "user",
     "image": "/images/users/sofia.jpg"
   },
   {
-   "id": 5,
+    "id": 5,
     "firstName": "Lucía",
     "lastName": "Fernández",
     "email": "lucia.fernandez@gmail.com",
-    "password": "lucia1234",
+    "password": "$2b$10$dBQymlkmM1cNSuoHb4sls.JUkn.XFIKDOjkEKlnTZpjm8rbFdzemO",
     "category": "admin",
     "image": "/images/users/lucia.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Gaston",
+    "lastName": "Suarez",
+    "email": "lionel@gmail.com",
+    "password": "$2b$10$jNpTN904blgDV1uAJBSmBevyGyZfRczbq9nvgQoDrb2AbGwGlDDaq",
+    "category": "admin",
+    "image": "/images/users/user-1749933533564.jpeg"
   }
-
 ]

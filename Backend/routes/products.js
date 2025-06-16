@@ -1,31 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
-const multer = require('multer');
-const productController = require('../controllers/productController');
+const productsController = require('../controllers/productsController');
+const upload = require('../middlewares/multerProduct');
+const productValidator = require('../middlewares/validations/productValidator');
+const authMiddleware = require('../middlewares/authMiddleware');
 
-// Configuración de multer para guardar imágenes en /public/images
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../public/images'));
-  },
-  filename: function (req, file, cb) {
-    // Genera un nombre único para evitar que se sobrescriban archivos
-    const uniqueSuffix = Date.now() + path.extname(file.originalname);
-    cb(null, file.fieldname + '-' + uniqueSuffix);
-  }
-});
+// Rutas CRUD de productos
+router.get('/', productsController.list);
 
-const upload = multer({ storage });
+router.get('/create', authMiddleware, productsController.create);
+router.post('/', authMiddleware, upload.single('imagen'), productValidator, productsController.store);
 
-// Rutas
-router.get('/', productController.list);//mostrar listado de producto
-router.get('/create', productController.create);//mostrar formulario de creacion de producto
-router.post('/', upload.single('imagen'), productController.store); // metodo post
-router.get('/:id/edit', productController.edit);//mostrar formulario de edicion de producto
-router.put('/:id', upload.single('imagen'), productController.update); //actualizar producto
-router.delete('/:id', productController.destroy);//eliminar un producto
-router.get('/:id', productController.detail);//mostrar detalle de producto
+router.get('/:id/edit', authMiddleware, productsController.edit);
+router.put('/:id', authMiddleware, upload.single('imagen'), productValidator, productsController.update);
 
+router.delete('/:id', authMiddleware, productsController.destroy);
+router.get('/search', productsController.search);
 
+router.get('/:id', productsController.detail);
 module.exports = router;

@@ -1,10 +1,13 @@
 const multer = require('multer');
 const path = require('path');
 
+const folderPath = path.join(__dirname, '../public/images/users');
+
+
 // Configuración del almacenamiento
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, '../../public/images/users'));
+    cb(null, folderPath);
   },
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + path.extname(file.originalname);

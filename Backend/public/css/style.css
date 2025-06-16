@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+
 }
 
 h1 {
@@ -115,7 +115,7 @@ body {
     height: 90vh;
     width: 100%;
     background-size: cover;
-    background-position: top 25px rigth 0;
+    background-position: top 25px;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -216,12 +216,6 @@ i:hover {
 }
 
 /*Footer**********************************************************************************************************************************************************************************************/
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -432,8 +426,19 @@ footer .copyrigth {
 
 }
 
+.input-error {
+    border: 2px solid red;
+}
 
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
 
+/*select[name="hiden"] {
+  display: none;
+}
+*/
 
 
 
@@ -443,7 +448,7 @@ footer .copyrigth {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vhs;
+    min-height: 100vh;
     margin: 20px;
     padding: 80px;
     border: 1px solid #a4bdae;
@@ -663,6 +668,10 @@ button {
 
     }
 
+    #navbar.active {
+        right: 0;
+    }
+
     #hero {
         padding: 0 20px;
         background-position: 55%;
@@ -702,7 +711,7 @@ button {
         margin: 0 auto;
         text-align: center;
         width: 90%;
-        
+
     }
 
     .pro-container {

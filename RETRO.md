@@ -46,6 +46,7 @@ apesar de que algunos puntos se unian con otros y se hacia mas rapido fue muy co
 y saber que se puede validar por el frontend es increible aunq no sea muy efectivo 
 validar desde el backen es una muy buena experiencia
 todos los productos y el login, el registro de usuario 
+
 *Sprint 8
 me parecio increible React para el frontend
 y como la api del fron se conecta a la app del backend

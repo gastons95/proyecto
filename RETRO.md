@@ -52,3 +52,6 @@ me parecio increible React para el frontend
 y como la api del fron se conecta a la app del backend
 el dashboard con todos los datos de usuarios y productos es excelente 
 la verdad se que tengo mucho que mejorar, pero el haber podido haber echo todo este recorrido fue genial
+en la correcion del proyecto 
+tuve que alinear la tabla de la base de datos con el modelo que hice 
+
